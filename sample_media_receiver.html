@@ -575,7 +575,11 @@ limitations under the License.
                     var initialTimeIndexSeconds = event.data['media']['currentTime'] || 0;
                     // TODO: real code would know what content it was going to access and this crap would not be here.
                     var protocol = null;
-                    var ext = ext = url.split('.').pop();
+
+                    var parser = document.createElement('a');
+                    parser.href = url;
+
+                    var ext = ext = parser.pathname.split('.').pop();
                     if (ext === 'm3u8') {
                         protocol =  cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
                     } else if (ext === 'mpd') {
