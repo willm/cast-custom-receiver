@@ -233,6 +233,10 @@ limitations under the License.
 
                 var senders = window.castReceiverManager.getSenders();
                 setHudMessage('sessionCount', '' + senders.length);
+
+                //If last sender explicity disconnects, turn off
+                if(senders.length == 0 && event.reason == cast.receiver.system.DisconnectReason.REQUESTED_BY_SENDER)
+                  window.close();
             }
 
             /**
