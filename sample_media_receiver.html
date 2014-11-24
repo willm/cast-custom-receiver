@@ -216,7 +216,7 @@ limitations under the License.
                 window.timeout = null;
             } else {
                 window.mediaElement.pause(); // Pause playback
-                window.timeout = window.setTimeout(function(){window.close();}, 10000); // 10 Minute timeout
+                window.timeout = window.setTimeout(function(){window.close();}, 600000); // 10 Minute timeout
             }
         }
         
@@ -620,23 +620,6 @@ limitations under the License.
         window.mediaElement.addEventListener('seeked', function(e){
             console.log("######### MEDIA ELEMENT SEEKED " + e);
             setHudMessage('mediaElementState','Seeked');
-        });
-
-        /**
-         * ALTERNATIVE TO onVisibilityChanged
-         *
-         * Use this to know when the user switched away from the Cast device input. It depends on the TV
-         * Supporting CEC
-         **/
-        document.addEventListener('webkitvisibilitychange', function(){
-            if(document.webkithidden) {
-                window.mediaElement.pause(); // Pause playback
-                window.timeout = window.setTimeout(function(){window.close();}, 10000); // 10 second timeout
-            } else {
-                window.mediaElement.play(); // Resume media playback
-                window.clearTimeout(window.timeout); // Turn off the timeout
-                window.timeout = null;
-            }
         });
 
         // Add your app logic here after the receiver SDK has been initialized.
