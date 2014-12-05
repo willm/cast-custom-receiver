@@ -24,7 +24,7 @@ This Google Cast demo application shows how to build a receiver application that
 The source is heavily documented and for additional reference please refer to the Receivers section of the Google Cast documentation.
 
 ## References and How to report bugs
-* Cast APIs: http://developers.google.com/cast/docs
+* Cast APIs: http://developers.google.com/cast/docs/reference
 * Design Checklist (http://developers.google.com/cast/docs/design_checklist)
 * If you find any issues, please open a bug here on GitHub
 
