@@ -210,7 +210,7 @@ limitations under the License.
 
             /** check if visible and pause media if not - add a timer to tear down after a period of time
                if visibilty does not change back **/
-            if (event.data) { // It is visible
+            if (event.isVisible) { // It is visible
                 window.mediaElement.play(); // Resume media playback
                 window.clearTimeout(window.timeout); // Turn off the timeout
                 window.timeout = null;
