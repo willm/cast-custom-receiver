@@ -278,8 +278,11 @@ limitations under the License.
          * @param obj
          */
         window.mediaManager.onError = function(obj) {
-            console.log("### Media Manager - error: " + JSON.stringify(obj));
-            setHudMessage('mediaManagerMessage', 'ERROR - ' + JSON.stringify(obj));
+            try {
+              console.log("### Media Manager - error: " + JSON.stringify(obj));
+              setHudMessage('mediaManagerMessage', 'ERROR - ' + JSON.stringify(obj));
+            } catch (e) {
+            }
 
             window.mediaManager['onErrorOrig'](obj);
         }
