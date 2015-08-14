@@ -16,7 +16,7 @@ This Google Cast demo application shows how to build a receiver application that
 ## Project Setup (Optional)
 * Install NodeJS (http://nodejs.org/) for your platform
 * In the root of this project execute
-* $> npm install express
+* $> npm install
 * $> node s3.js
 * Receiver will be available on http://IP-Address:9999/sample_media_receiver.html which should be the URL for your registered application in the Developer Console
 

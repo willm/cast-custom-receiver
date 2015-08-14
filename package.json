@@ -1,0 +1,23 @@
+{
+  "name": "cast-custom-receiver",
+  "version": "1.0.0",
+  "description": "demo receiver application that can cast videos from a Cast Sender device",
+  "main": "s3.js",
+  "dependencies": {
+    "express": "^3.20.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/googlecast/cast-custom-receiver.git"
+  },
+  "author": "",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/googlecast/cast-custom-receiver/issues"
+  },
+  "homepage": "https://github.com/googlecast/cast-custom-receiver"
+}
